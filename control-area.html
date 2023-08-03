@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Sergio Bosetti">
+
+    <title>Sistema Integral de Gesti&oacute;n Ambiental [Control &Aacute;rea]</title>
+
+    <!-- Fonts personalizadas -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+		  rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" 
+		  rel="stylesheet">
+	
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    
+	<!-- Estilos personalizados -->
+    <link href="css/sb-admin-2.css" 
+		  rel="stylesheet">
+	
+	<link href="css/select.css" rel="stylesheet" />
+	
+	<!-- Javascript -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/0a31562bff.js" 
+			crossorigin="anonymous">
+	</script>
+	
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Inicio Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion bg-dark" 
+			id="accordionSidebar">
+
+            <!-- Sidebar - Logo -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-text mx-3">Sistema Integral de Gesti&oacute;n Ambiental</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+			
+			<!-- Nav Item - Inicio -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+				</a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <!-- Nav Item - Notificaciones -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNotificaciones"
+                    aria-expanded="true" aria-controls="collapseNotificaciones">
+                    <i class="fa-sharp fa-solid fa-desktop"></i>
+                    <span>Notificaciones</span>
+				</a>
+				<div id="collapseNotificaciones" class="collapse" aria-labelledby="headingNotificaciones" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="inbox.html"><i class="fa-sharp fa-solid fa-inbox mr-2"></i><span>Inbox</span></a>
+                        <a class="collapse-item" href="programacion.html"><i class="fa-sharp fa-solid fa-map-location-dot mr-2"></i></i><span>Programaci&oacute;n</span></a>
+						<a class="collapse-item" href="mis-pedidos.html"><i class="fa-sharp fa-solid fa-circle-question mr-2"></i></i><span>Mis pedidos</span></a>
+						<a class="collapse-item" href="autorizar.html"><i class="fa-sharp fa-solid fa-circle-check mr-2"></i><span>Autorizar</span></a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Usuarios -->
+            <li class="nav-item">
+                <a class="nav-link" href="usuarios.html">
+                    <i class="fa-sharp fa-solid fa-users"></i>
+                    <span>Usuarios</span></a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Fajas -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFajas"
+                    aria-expanded="true" aria-controls="collapseFajas">
+                    <i class="fa-sharp fa-solid fa-store-slash"></i>
+                    <span>Fajas</span>
+                </a>
+                <div id="collapseFajas" class="collapse" aria-labelledby="headingFajas"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="fajas-asignacion.html"><i class="fa-sharp fa-solid fa-user-plus mr-2"></i><span>Asignaci&oacute;n</span></a>
+                        <a class="collapse-item" href="fajas-carga.html"><i class="fa-solid fa-list-ul mr-2"></i><span>Reportes</span></a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Actas -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseActas"
+                    aria-expanded="true" aria-controls="collapseActas">
+                    <i class="fa-sharp fa-solid fa-table"></i>
+                    <span>Actas</span>
+                </a>
+                <div id="collapseActas" class="collapse" aria-labelledby="headingActas" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="actas-asignacion.html"><i class="fa-sharp fa-solid fa-user-plus mr-2"></i><span>Asignaci&oacute;n</span></a>
+                        <a class="collapse-item" href="actas-carga.html"><i class="fa-sharp fa-solid fa-list-ul mr-2"></i><span>Reportes</span></a>
+                        <a class="collapse-item" href="actas-envioboldt.html"><i class="fa-sharp fa-solid fa-square-arrow-up-right mr-2"></i><span>Envio a Boldt</span></a>
+                    </div>
+                </div>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Reporte Diario -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDiario"
+                    aria-expanded="true" aria-controls="collapseDiario">
+                    <i class="fa-sharp fa-solid fa-chart-line"></i>
+                    <span>Reporte Diario</span>
+                </a>
+                <div id="collapseDiario" class="collapse" aria-labelledby="headingDiario" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="checklist-alta.html"><i class="fa-sharp fa-solid fa-square-check mr-2"></i><span>Alta Checklist</span></a>
+                        <a class="collapse-item" href="checklist-autorizacion.html"><i class="fa-sharp fa-solid fa-thumbs-up mr-2"></i><span>Autorizaci&oacute;n Checklist</span></a>
+                        <a class="collapse-item" href="checklist-cierre.html"><i class="fa-sharp fa-solid fa-lock mr-2"></i><span>Validaci&oacute;n Checklist</span></a>
+						 <a class="collapse-item" href="checklist-upload.html"><i class="fa-solid fa-arrow-up-from-bracket mr-2"></i><span>Subir Checklist</span></a>
+						<a class="collapse-item" href="unir-establecimientos.html"><i class="fa-solid fa-down-left-and-up-right-to-center mr-2"></i><span>Unir Establecimientos</span></a>
+						
+                    </div>
+                </div>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Control Area -->
+            <li class="nav-item">
+                <a class="nav-link" href="control-area.html">
+                    <i class="fa-sharp fa-solid fa-compass"></i>
+                    <span>Control &Aacute;rea</span></a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+			
+            <!-- Nav Item - Programacion Area -->
+            <li class="nav-item">
+                <a class="nav-link" href="programacion-area.html">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <span>Programaci&oacute;n &Aacute;rea</span></a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Laboratorio -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLaboratorio"
+                    aria-expanded="true" aria-controls="collapseLaboratorio">
+                    <i class="fa-sharp fa-solid fa-flask-vial"></i>
+                    <span>Laboratorio</span>
+                </a>
+                <div id="collapseLaboratorio" class="collapse" aria-labelledby="headingLaboratorio"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="laboratorio-pedidos.html"><i class="fa-sharp fa-solid fa-clipboard-question mr-2"></i><span>Pedidos</span></a>
+                        <a class="collapse-item" href="laboratorio-muestras.html"><i class="fa-sharp fa-solid fa-vial mr-2"></i><span>Muestras</span></a>
+                    </div>
+                </div>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Admin Panel -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdminpanel"
+                    aria-expanded="true" aria-controls="collapseAdminpanel">
+                    <i class="fa-sharp fa-solid fa-sliders"></i>
+                    <span>Admin Panel</span>
+                </a>
+                <div id="collapseAdminpanel" class="collapse" aria-labelledby="headingAdminpanel" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        
+                        
+						<a class="collapse-item" href="reporte-metas.html"><i class="fa-sharp fa-solid fa-flag-checkered mr-2"></i><span>Reporte Metas</span></a>
+						<a class="collapse-item" href="reporte-faltas.html"><i class="fa-sharp fa-solid fa-circle-xmark mr-2"></i><span>Reporte Faltas</span></a>
+						<a class="collapse-item" href="reporte-general.html"><i class="fa-sharp fa-solid fa-chart-column mr-2"></i><span>Reporte General</span></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline"> 
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- Fin Sidebar -->
+
+        <!-- Wrapper Contenido -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Contenido principal -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+					
+					<a href="index.html">
+					<img
+					  class="sidebar-card-illustration mb-2"
+					  src="img/logoBA.svg"
+					  alt="Ciudad de Buenos Aires"
+					/>
+				  </a>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+
+                        <!-- Nav Item - Alerta CHL Vencidos -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-bell"></i>
+                                <!-- Contador - CHL Vencidos -->
+                                <span class="badge badge-danger badge-counter">3</span>
+                            </a>
+                            <!-- Dropdown - CHL Vencidos -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header bg-danger border-0">
+                                    3 Checklist Vencidos
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-danger">
+                                            <i class="fa-solid fa-file-lines text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Checklist N° 109456</div>
+                                        <span class="font-weight-bold">Hac&eacute; clic aqu&iacute; para editar</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-danger">
+                                            <i class="fa-solid fa-file-lines text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Checklist N° 109498</div>
+                                        Hac&eacute; clic aqu&iacute; para editar
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-danger">
+                                            <i class="fa-solid fa-file-lines text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Checklist N° 109501</div>
+                                        Hac&eacute; clic aqu&iacute; para editar
+                                    </div>
+                                </a>
+                                <div href="checklist-vencidos.html" class="dropdown-item d-flex">
+									<div class="btn btn-danger" style="width: 100%;">
+										<span class="text text-white">Ver todos los checklist</span>
+									</div>
+								</div>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - CHL Reprogramar -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-repeat"></i>
+                                <!-- Contador - CHL Reprogramar -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - CHL Reprogramar -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header bg-warning border-0 text-black">
+                                    7 Checklist para Reinspeccionar
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">DEFENSA 1490</div>
+                                        <div class="small text-gray-500">Checklist 171151</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">PEDRAZA MANUELA 4067</div>
+                                        <div class="small text-gray-500">Checklist 171130</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                   <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">HELGUERA 2876</div>
+                                        <div class="small text-gray-500">Checklist 171154</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">IBARROLLA 7274</div>
+                                        <div class="small text-gray-500">Checklist 173444</div>
+                                    </div>
+                                </a>
+                                <div href="checklist-reinspeccionar.html" class="dropdown-item d-flex">
+									<div class="btn btn-warning" style="width: 100%;">
+										<span class="text text-black">Ver todos los checklist</span>
+									</div>
+								</div>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - Info Usuario -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<!-- Nombre y Apellido Usuario -->
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Manuel Mandeb</span>
+								<!-- Avatar Usuario -->
+                                <i class="fa-solid fa-circle-user text-lg"></i>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">                            
+                                
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+									<i class="fa-solid fa-arrow-right-from-bracket mr-2 text-gray-400"></i>
+                                    Cerrar Sesi&oacute;n
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- Fin Topbar -->
+
+                <!-- Inicio Contenido de Pagina -->
+                <div class="container-fluid">
+					
+					<!-- Page Heading -->
+						
+					<div class="d-sm-flex align-items-center justify-content-between mb-4">
+												
+                        <h1 class="h3 mb-0 text-primary">
+							<i class="fa-solid fa-compass mr-2"></i>
+							Control &Aacute;rea
+						</h1>
+						<div>
+							<a href="#" class="d-none d-sm-inline-block btn btn-outline-success shadow-sm mr-2"><i class="fa-solid fa-file-excel mr-2"></i>Descargar Excel</a>
+						</div>
+                    </div>
+					
+					
+                    <!-- Content Row -->
+                    <div class="row">
+						
+                    						
+						<!-- Inicio DataTable -->
+						<div class="card shadow mb-4">
+							
+							<div class="card-header d-sm-flex align-items-center justify-content-between mb-0">
+								<nav aria-label="AsignaNav">
+									<ul class="pagination">
+										<li class="page-item"><a class="page-link" href="#">Previo</a></li>
+										<li class="page-item"><a class="page-link" href="#">1</a></li>
+										<li class="page-item active"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+									</ul>
+								</nav>
+								<!--<div class="d-sm-flex align-items-center mb-0 text-xs w-50 text-right">Vista de 
+									<select class="form-select w-25" aria-label="SelectCant">
+										<option selected>5</option>
+										<option>20</option>
+										<option>50</option>
+										<option>100</option>
+										<option>Todos</option>
+									</select>
+								 registros | Se encontraron un total de 7 registros	
+								</div>-->
+							</div>
+							<div class="card-body text-xs">
+								<div class="table-responsive">
+									<table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+										<thead class="thead-dark text-center">
+											<tr>
+												<th scope="col">Acciones</th>
+												<th scope="col">Checklist</th>
+												<th scope="col">Motivo</th>
+												<th scope="col">Domicilio</th>
+												<th scope="col">Inspector/a</th>
+												<th scope="col">Fecha Programaci&oacute;n</th>
+												<th scope="col">Fecha Inspecci&oacute;n</th>
+												<th scope="col">Estado</th>
+												<th scope="col">Expediente</th>
+												<th scope="col">GEDO Chl.</th>
+												<th scope="col">GEDO Acta</th>
+												<th scope="col">Acta</th>
+												<th scope="col">Vinculado</th>
+												<th scope="col">Reinspeccionar</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">
+													<a href="#" class="btn btn-outline-primary btn-circle btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Buscar">
+														<i class="fa-solid fa-magnifying-glass"></i>
+													</a>
+													<a href="#" class="btn btn-outline-secondary btn-circle btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Reiniciar">
+														<i class="fa-solid fa-rotate-right"></i>
+													</a>
+												</th>
+												<td class="w-25">
+													<input 
+														type="number" 
+														class="form-control" 
+														id="chlInsp" 
+														placeholder=""
+													/>
+												</td>
+												<td>
+													<input 
+														type="text"}
+														class="form-control" 
+														list="motivoOptions" 
+														id="motivoDataList" 
+														placeholder="..."
+													/>
+													<datalist id="motivoOptions">
+														<option value="Circuito Plan Inspectivo">
+														<option value="Control de Cedula">
+														<option value="Eventos Nocturnos">
+														<option value="Inspeccion Previa (IP)">
+														<option value="Requerimiento Externo (Denuncia)">
+														<option value="etc...">
+													</datalist>
+												</td>
+												<td class="w-25">
+													<input 
+														type="text" 
+														class="form-control" 
+														id="Direcciones" 
+														placeholder=""
+													/>
+												</td>
+												<td>
+													<input 
+													   class="form-control" 
+													   list="ins-inspectorOptions" 
+													   id="ins-inspectorDataList" 
+													   placeholder="..."
+													/>
+													<datalist id="ins-inspectorOptions">
+														<option value="Mandeb, Manuel">
+														<option value="Argento, Pepe">
+														<option value="Chavez, El Loco">
+														<option value="etc...">
+													</datalist>
+												</td>
+												<td>
+													<input 
+														type="text"
+														class="form-control"
+														id="buscaFechaProgramacion"
+														name="buscaFechaProgramacion"
+													/>
+												</td>
+												<td>
+													<input 
+														type="text"
+														class="form-control"
+														id="buscaFechaInspeccion"
+														name="buscaFechaInspeccion"
+													/>
+												</td>
+												<td class="w-25">
+													<input 
+													   type="text"
+													   class="form-control" 
+													   list="estado-insOptions" 
+													   id="estado-insFajaDataList" 
+													   placeholder="..."
+													/>
+													<datalist id="estado-insOptions">
+														<option value="Anular">
+														<option value="Completa">
+														<option value="Firmar">
+														<option value="Programada">
+														<option value="Vencida">
+														<option value="Vigente Papel">
+														<option value="Vigente Tablet">
+													</datalist>
+												</td>
+												<td>
+													<input 
+														type="text" 
+														class="form-control" 
+														id="expte" 
+														placeholder=""
+													/>
+												</td>
+												<td>
+													<input 
+														type="text" 
+														class="form-control" 
+														id="gedo-chl" 
+														placeholder=""
+													/>
+												</td>
+												<td>
+													<input 
+														type="text" 
+														class="form-control" 
+														id="gedo-acta" 
+														placeholder=""
+													/>
+												</td>
+												<td class="text-lg pl-5">
+													<div class="form-check form-switch">
+														<input 
+															class="form-check-input" 
+															type="checkbox" 
+															role="switch" 
+															id="actao"
+														/>
+													</div>
+												</td>
+												<td class="text-lg pl-5">
+													<div class="form-check form-switch">
+														<input 
+															class="form-check-input" 
+															type="checkbox" 
+															role="switch" 
+															id="vinculado"
+														/>
+													</div>
+												</td>
+												<td class="text-lg pl-5">
+													<div class="form-check form-switch">
+														<input 
+															class="form-check-input" 
+															type="checkbox" 
+															role="switch" 
+															id="reinspeccionar"
+														/>
+													</div>
+												</td>
+											</tr>
+											
+											<!-- Resultado Habilitado -->
+											<tr>
+												<th scope="row">
+													<a href="#" class="btn btn-outline-info btn-circle btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" data-toggle="modal" data-target="#reinspeccionarModal" title="Reinspeccionar">
+                                        			<i class="fa-solid fa-rotate"></i>
+													</a>
+																										
+													<a href="#" class="btn btn-outline-info btn-circle btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Checklist">
+                                        			<i class="fa-solid fa-file-pdf"></i>
+													</a>
+													
+													<a href="establecimiento.html" class="btn btn-outline-info btn-circle btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Establecimiento">
+                                        			<i class="fa-solid fa-shop"></i>
+													</a>
+													
+													<a href="#" class="btn btn-outline-danger btn-circle btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" data-toggle="modal" data-target="#rechazaInspeccionModal" title="Rechazar">
+                                        			<i class="fa-solid fa-thumbs-down"></i>
+													</a>
+													
+												</th>
+												<td><a href="#" class="btn btn-primary btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Checklist">555666</a></td>
+												<td>Requerimiento Externo (Denuncia)</td>
+												<td>CORRIENTES AV. 348</td>
+												<td>Mandeb, Manuel</td>
+												<td></td>
+												<td>07/08/2021</td>
+												<td>Completa</td>
+												<td>EX-1970-07081970-GCABA-DGCONTA</td>
+												<td>IF-2021-0303456-GCABA-DGCONTA</td>
+												<td>QACTA-2021-666-GCABA-DGCONTA</td>
+												<td class="text-lg text-center"><i class="fa-solid fa-square-check"></i></td>
+												<td class="text-lg text-center"><i class="fa-solid fa-square-check"></i></td>
+												<td class="text-lg text-center"><i class="fa-solid fa-repeat"></i></td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="card-header d-sm-flex align-items-center justify-content-between mb-0">
+								<nav aria-label="ChecklistNav">
+									<ul class="pagination">
+										<li class="page-item"><a class="page-link" href="#">Previo</a></li>
+										<li class="page-item"><a class="page-link" href="#">1</a></li>
+										<li class="page-item active"><a class="page-link" href="#">2</a></li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+									</ul>
+								</nav>
+								<!--<div class="d-sm-flex align-items-center mb-0 text-xs w-50 text-right">Vista de 
+									<select class="form-select w-25" aria-label="SelectCant">
+										<option selected>5</option>
+										<option>20</option>
+										<option>50</option>
+										<option>100</option>
+										<option>Todos</option>
+									</select>
+								 registros | Se encontraron un total de 7 registros	
+								</div>-->
+							</div>						
+						</div>
+						<!-- Fin DataTable -->
+
+
+
+					</div>
+
+
+
+                    <!-- Content Row -->
+
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-gray-900">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; DGCONTA 2023</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">¿Todo listo para irte?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Est&aacute;s segur@ que quer&eacute;s Cerrar Sesi&oacute;n?</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+                    <a class="btn btn-primary" href="login.html">Si</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rechazar CHL Modal-->
+    <div class="modal fade" id="rechazaInspeccionModal" tabindex="-1" role="dialog" aria-labelledby="rechazaInspeccion"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Rechazar Inspecci&oacute;n</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+					<div class="alert alert-danger" role="alert">
+						<i class="fa-solid fa-triangle-exclamation mr-2 h1 float-left"></i>
+  						¿Est&aacute;s segur@ que quer&eacute;s rechazar la inspecci&oacute;n N° 555666?
+					</div>
+					
+				<div class="row">
+					
+					<!-- Datos asignacion -->
+					<div class="col-md mb-4">
+						<div class="card border-left-primary shadow h-100 py-2">
+							<div class="card-body">
+								<div class="row no-gutters align-items-center">
+									<div class="col mr-2">
+										<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+											Datos Checklist</div>
+										<div class="h6 mb-0 font-weight-bold text-gray-800">Requerimiento Externo (Denuncia)</div>
+										<div class="h6 mb-0 font-weight-bold text-gray-800">CORRIENTES AV. 348</div>
+										<div class="h6 mb-0 font-weight-bold text-gray-800">Mandeb, Manuel</div>
+										<div class="h6 mb-0 font-weight-bold text-gray-800">07/08/2021</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+				
+				</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+					<button class="btn btn-primary" type="button" data-dismiss="modal">Si</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reinspeccionar Modal-->
+    <div class="modal fade" id="reinspeccionarModal" tabindex="-1" role="dialog" aria-labelledby="reinspeccionarFaja"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+				<form>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Reinspeccionar Checklist N° 555666</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+				
+				<div class="row">
+					<!-- Datos asignacion -->
+					<div class="col-md mb-4">
+						<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+							Domicilio Establecimiento</div>
+						<div class="h6 mb-0 font-weight-bold text-gray-800">CORRIENTES AV. 348</div>
+					</div>
+				</div>
+					
+				<div class="row">
+					<!-- Datos uso -->
+					<div class="col-md mb-4">
+	
+										<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+											Reasignar a</div>
+											<div class="col-md mb-4">
+												<div class="form-floating">
+													<select class="form-select" id="floatingSelectGrid" aria-label="Floating label inspector">
+														<option selected>Seleccion&aacute; inspector/a</option>
+														<option value="1">Mandeb, Manuel</option>
+														<option value="2">Chavez, El Loco</option>
+														<option value="3">Dorkas, Tomas</option>
+														<option value="4">Argento, Pepe</option>
+														<option value="5">Goreiro, Manuel</option>
+														<option value="6">etc...</option>
+													</select>
+													<label for="floatingSelectGrid">Inspector/a</label>
+												</div>
+											</div>
+											<div class="col-md mb-4 col-">
+												<div class="form-floating">
+													<input 
+														type="text"
+														class="form-control"
+														id="fechaReasignacion"
+														name="fechaReasignacion"
+													/>
+													<label for="fechaReasignacion">Reasignar a Fecha</label>
+												</div>
+											</div>
+											<div class="col-md mb-4">
+												<p>Archivos Adjuntos</p>
+												<ul class="text-xs">
+													<li><a href="" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar Archivo"><span class="mr-2">Anexo Denuncia Ciudadana.PDF</span><i class="fa-solid fa-trash-can text-danger"></i></a></li>
+													<li><a href="" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar Archivo"><span class="mr-2">Cedula 4585 - Vigente.PDF</span><i class="fa-solid fa-trash-can text-danger"></i></a></li>
+													<li><a href="" data-bs-toggle="tooltip" data-bs-placement="top" title="Eliminar Archivo"><span class="mr-2">CHL 222333.PDF</span><i class="fa-solid fa-trash-can text-danger"></i></a></li>
+												</ul>
+											</div>
+											<div class="col-md mb-4">
+												<div class="form-group">
+													<label for="checklistUpload">Adjuntar nuevo documento</label>
+													<input type="file" class="form-control-file" id="checklistUpload">
+													<!--<span class="text-xs text-black-50">Peso m&aacute;ximo permitido del archivo PDF = 10MB.</span>-->
+												</div>
+											</div>
+							
+						
+					</div>
+				</div>
+				
+				</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cerrar</button>
+					<button class="btn btn-primary" type="submit"><i class="fa-solid fa-repeat mr-2"></i>Reinspeccionar</button>
+                </div>
+				</form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+	<script>
+	$(function () {
+		$('#buscaFechaProgramacion').daterangepicker({
+			ranges: {
+				'Hoy': [moment(), moment()],
+				'Ayer': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+				'&Uacute;ltimos 7 d&iacute;as': [moment().subtract(6, 'days'), moment()],
+				'&Uacute;ltimos 30 d&iacute;as': [moment().subtract(29, 'days'), moment()],
+				'Este mes': [moment().startOf('month'), moment().endOf('month')],
+				'&Uacute;ltimo mes': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+			},
+			"locale": {
+				"format": "DD/MM/YYYY",
+				"separator": " - ",
+				"applyLabel": "Seleccionar",
+				"cancelLabel": "Cancelar",
+				"fromLabel": "Desde",
+				"toLabel": "Hasta",
+				"customRangeLabel": "Personalizar",
+				"daysOfWeek": [
+					"Do",
+					"Lu",
+					"Ma",
+					"Mi",
+					"Ju",
+					"Vi",
+					"Sa"
+				],
+				"monthNames": [
+					"Enero",
+					"Febrero",
+					"Marzo",
+					"Abril",
+					"Mayo",
+					"Junio",
+					"Julio",
+					"Agosto",
+					"Setiembre",
+					"Octubre",
+					"Noviembre",
+					"Diciembre"
+				],
+				"firstDay": 1
+			},
+			"opens": "center",
+		});
+	});
+		
+	$(function () {
+		$('#buscaFechaInspeccion').daterangepicker({
+			ranges: {
+				'Hoy': [moment(), moment()],
+				'Ayer': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+				'&Uacute;ltimos 7 d&iacute;as': [moment().subtract(6, 'days'), moment()],
+				'&Uacute;ltimos 30 d&iacute;as': [moment().subtract(29, 'days'), moment()],
+				'Este mes': [moment().startOf('month'), moment().endOf('month')],
+				'&Uacute;ltimo mes': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+			},
+			"locale": {
+				"format": "DD/MM/YYYY",
+				"separator": " - ",
+				"applyLabel": "Seleccionar",
+				"cancelLabel": "Cancelar",
+				"fromLabel": "Desde",
+				"toLabel": "Hasta",
+				"customRangeLabel": "Personalizar",
+				"daysOfWeek": [
+					"Do",
+					"Lu",
+					"Ma",
+					"Mi",
+					"Ju",
+					"Vi",
+					"Sa"
+				],
+				"monthNames": [
+					"Enero",
+					"Febrero",
+					"Marzo",
+					"Abril",
+					"Mayo",
+					"Junio",
+					"Julio",
+					"Agosto",
+					"Setiembre",
+					"Octubre",
+					"Noviembre",
+					"Diciembre"
+				],
+				"firstDay": 1
+			},
+			"opens": "center",
+		});
+	});
+
+	$(function () {
+		$('#fechaReasignacion').daterangepicker({
+			"locale": {
+				"format": "DD/MM/YYYY",
+				"separator": " - ",
+				"applyLabel": "Seleccionar",
+				"cancelLabel": "Cancelar",
+				"fromLabel": "Desde",
+				"toLabel": "Hasta",
+				"customRangeLabel": "Personalizar",
+				"daysOfWeek": [
+					"Do",
+					"Lu",
+					"Ma",
+					"Mi",
+					"Ju",
+					"Vi",
+					"Sa"
+				],
+				"monthNames": [
+					"Enero",
+					"Febrero",
+					"Marzo",
+					"Abril",
+					"Mayo",
+					"Junio",
+					"Julio",
+					"Agosto",
+					"Setiembre",
+					"Octubre",
+					"Noviembre",
+					"Diciembre"
+				],
+				"firstDay": 1
+			},
+			"opens": "center",
+			"singleDatePicker": true
+		});
+	});
+
+	</script>
+
+	<script>
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+	  return new bootstrap.Tooltip(tooltipTriggerEl)
+	})
+	</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Sergio Bosetti">
+
+    <title>Sistema Integral de Gesti&oacute;n Ambiental [Pedido C&eacute;dula]</title>
+
+    <!-- Fonts personalizadas -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+		  rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" 
+		  rel="stylesheet">
+    
+	<!-- Estilos personalizados -->
+    <link href="css/sb-admin-2.css" 
+		  rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <link href="css/tagify.css" rel="stylesheet" type="text/css" />
+	<link href="css/tagify-custom.css" rel="stylesheet" type="text/css" />
+	
+	<!-- include summernote css -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+	
+	<!-- Javascript -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/0a31562bff.js" 
+			crossorigin="anonymous">
+	</script>
+	
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Inicio Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion bg-dark" 
+			id="accordionSidebar">
+
+            <!-- Sidebar - Logo -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-text mx-3">Sistema Integral de Gesti&oacute;n Ambiental</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+			
+			<!-- Nav Item - Inicio -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+				</a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <!-- Nav Item - Notificaciones -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNotificaciones"
+                    aria-expanded="true" aria-controls="collapseNotificaciones">
+                    <i class="fa-sharp fa-solid fa-desktop"></i>
+                    <span>Notificaciones</span>
+				</a>
+				<div id="collapseNotificaciones" class="collapse" aria-labelledby="headingNotificaciones" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="inbox.html"><i class="fa-sharp fa-solid fa-inbox mr-2"></i><span>Inbox</span></a>
+                        <a class="collapse-item" href="programacion.html"><i class="fa-sharp fa-solid fa-map-location-dot mr-2"></i></i><span>Programaci&oacute;n</span></a>
+						<a class="collapse-item" href="mis-pedidos.html"><i class="fa-sharp fa-solid fa-circle-question mr-2"></i></i><span>Mis pedidos</span></a>
+						<a class="collapse-item" href="autorizar.html"><i class="fa-sharp fa-solid fa-circle-check mr-2"></i><span>Autorizar</span></a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Usuarios -->
+            <li class="nav-item">
+                <a class="nav-link" href="usuarios.html">
+                    <i class="fa-sharp fa-solid fa-users"></i>
+                    <span>Usuarios</span></a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Fajas -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFajas"
+                    aria-expanded="true" aria-controls="collapseFajas">
+                    <i class="fa-sharp fa-solid fa-store-slash"></i>
+                    <span>Fajas</span>
+                </a>
+                <div id="collapseFajas" class="collapse" aria-labelledby="headingFajas"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="fajas-asignacion.html"><i class="fa-sharp fa-solid fa-user-plus mr-2"></i><span>Asignaci&oacute;n</span></a>
+                        <a class="collapse-item" href="fajas-carga.html"><i class="fa-solid fa-list-ul mr-2"></i><span>Reportes</span></a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Actas -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseActas"
+                    aria-expanded="true" aria-controls="collapseActas">
+                    <i class="fa-sharp fa-solid fa-table"></i>
+                    <span>Actas</span>
+                </a>
+                <div id="collapseActas" class="collapse" aria-labelledby="headingActas" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="actas-asignacion.html"><i class="fa-sharp fa-solid fa-user-plus mr-2"></i><span>Asignaci&oacute;n</span></a>
+                        <a class="collapse-item" href="actas-carga.html"><i class="fa-sharp fa-solid fa-list-ul mr-2"></i><span>Reportes</span></a>
+                        <a class="collapse-item" href="actas-envioboldt.html"><i class="fa-sharp fa-solid fa-square-arrow-up-right mr-2"></i><span>Envio a Boldt</span></a>
+                    </div>
+                </div>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Reporte Diario -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDiario"
+                    aria-expanded="true" aria-controls="collapseDiario">
+                    <i class="fa-sharp fa-solid fa-chart-line"></i>
+                    <span>Reporte Diario</span>
+                </a>
+                <div id="collapseDiario" class="collapse" aria-labelledby="headingDiario" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="checklist-alta.html"><i class="fa-sharp fa-solid fa-square-check mr-2"></i><span>Alta Checklist</span></a>
+                        <a class="collapse-item" href="checklist-autorizacion.html"><i class="fa-sharp fa-solid fa-thumbs-up mr-2"></i><span>Autorizaci&oacute;n Checklist</span></a>
+                        <a class="collapse-item" href="checklist-cierre.html"><i class="fa-sharp fa-solid fa-lock mr-2"></i><span>Validaci&oacute;n Checklist</span></a>
+						 <a class="collapse-item" href="checklist-upload.html"><i class="fa-solid fa-arrow-up-from-bracket mr-2"></i><span>Subir Checklist</span></a>
+						<a class="collapse-item" href="unir-establecimientos.html"><i class="fa-solid fa-down-left-and-up-right-to-center mr-2"></i><span>Unir Establecimientos</span></a>
+						
+                    </div>
+                </div>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Control Area -->
+            <li class="nav-item">
+                <a class="nav-link" href="control-area.html">
+                    <i class="fa-sharp fa-solid fa-compass"></i>
+                    <span>Control &Aacute;rea</span></a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+			
+            <!-- Nav Item - Programacion Area -->
+            <li class="nav-item">
+                <a class="nav-link" href="programacion-area.html">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <span>Programaci&oacute;n &Aacute;rea</span></a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Laboratorio -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLaboratorio"
+                    aria-expanded="true" aria-controls="collapseLaboratorio">
+                    <i class="fa-sharp fa-solid fa-flask-vial"></i>
+                    <span>Laboratorio</span>
+                </a>
+                <div id="collapseLaboratorio" class="collapse" aria-labelledby="headingLaboratorio"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="laboratorio-pedidos.html"><i class="fa-sharp fa-solid fa-clipboard-question mr-2"></i><span>Pedidos</span></a>
+                        <a class="collapse-item" href="laboratorio-muestras.html"><i class="fa-sharp fa-solid fa-vial mr-2"></i><span>Muestras</span></a>
+                    </div>
+                </div>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Admin Panel -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdminpanel"
+                    aria-expanded="true" aria-controls="collapseAdminpanel">
+                    <i class="fa-sharp fa-solid fa-sliders"></i>
+                    <span>Admin Panel</span>
+                </a>
+                <div id="collapseAdminpanel" class="collapse" aria-labelledby="headingAdminpanel" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        
+                        
+						<a class="collapse-item" href="reporte-metas.html"><i class="fa-sharp fa-solid fa-flag-checkered mr-2"></i><span>Reporte Metas</span></a>
+						<a class="collapse-item" href="reporte-faltas.html"><i class="fa-sharp fa-solid fa-circle-xmark mr-2"></i><span>Reporte Faltas</span></a>
+						<a class="collapse-item" href="reporte-general.html"><i class="fa-sharp fa-solid fa-chart-column mr-2"></i><span>Reporte General</span></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline"> 
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- Fin Sidebar -->
+
+        <!-- Wrapper Contenido -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Contenido principal -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+					
+					<a href="index.html">
+					<img
+					  class="sidebar-card-illustration mb-2"
+					  src="img/logoBA.svg"
+					  alt="Ciudad de Buenos Aires"
+					/>
+				  </a>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+
+                        <!-- Nav Item - Alerta CHL Vencidos -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-bell"></i>
+                                <!-- Contador - CHL Vencidos -->
+                                <span class="badge badge-danger badge-counter">3</span>
+                            </a>
+                            <!-- Dropdown - CHL Vencidos -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header bg-danger border-0">
+                                    3 Checklist Vencidos
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-danger">
+                                            <i class="fa-solid fa-file-lines text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Checklist N° 109456</div>
+                                        <span class="font-weight-bold">Hac&eacute; clic aqu&iacute; para editar</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-danger">
+                                            <i class="fa-solid fa-file-lines text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Checklist N° 109498</div>
+                                        Hac&eacute; clic aqu&iacute; para editar
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-danger">
+                                            <i class="fa-solid fa-file-lines text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Checklist N° 109501</div>
+                                        Hac&eacute; clic aqu&iacute; para editar
+                                    </div>
+                                </a>
+                                <div href="checklist-vencidos.html" class="dropdown-item d-flex">
+									<div class="btn btn-danger" style="width: 100%;">
+										<span class="text text-white">Ver todos los checklist</span>
+									</div>
+								</div>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - CHL Reprogramar -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-repeat"></i>
+                                <!-- Contador - CHL Reprogramar -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - CHL Reprogramar -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header bg-warning border-0 text-black">
+                                    7 Checklist para Reinspeccionar
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">DEFENSA 1490</div>
+                                        <div class="small text-gray-500">Checklist 171151</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">PEDRAZA MANUELA 4067</div>
+                                        <div class="small text-gray-500">Checklist 171130</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                   <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">HELGUERA 2876</div>
+                                        <div class="small text-gray-500">Checklist 171154</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">IBARROLLA 7274</div>
+                                        <div class="small text-gray-500">Checklist 173444</div>
+                                    </div>
+                                </a>
+                                <div href="checklist-reinspeccionar.html" class="dropdown-item d-flex">
+									<div class="btn btn-warning" style="width: 100%;">
+										<span class="text text-black">Ver todos los checklist</span>
+									</div>
+								</div>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - Info Usuario -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<!-- Nombre y Apellido Usuario -->
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Manuel Mandeb</span>
+								<!-- Avatar Usuario -->
+                                <i class="fa-solid fa-circle-user text-lg"></i>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">                            
+                                
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+									<i class="fa-solid fa-arrow-right-from-bracket mr-2 text-gray-400"></i>
+                                    Cerrar Sesi&oacute;n
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- Fin Topbar -->
+
+                <!-- Inicio Contenido de Pagina -->
+                <div class="container-fluid">
+					
+					<!-- Page Heading -->
+						
+					<div class="d-sm-flex align-items-center justify-content-between mb-4">
+												
+                        <h1 class="h3 mb-0 text-primary">
+							<i class="fa-solid fa-file-pen mr-2"></i>
+							Editar Disposici&oacute;n
+						</h1>
+                    </div>
+					
+					
+                    <!-- Content Row -->
+                    <div class="row">
+						
+                        <form>
+                            <div class="row g-2">
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="number" 
+											class="form-control" 
+											id="floatingInputDispoNro" 
+											placeholder="153421" 
+											value="111215"
+                                            disabled
+										/>
+										<label for="floatingInputDispoNro">N° Disposici&oacute;n</label>
+									</div>
+								</div>
+                                <div class="col-md mb-4">
+                                    <div class="form-floating">
+										<select class="form-select" id="floatingSelectReparticion" aria-label="Floating label reparticion" disabled>
+											<option>Seleccion&aacute; una Repartici&oacute;n</option>
+											<option selected value="1">GCABA-DGCONTA</option>
+											<option value="2">MGEYA-DGCONTA</option>
+											<option value="3">MGEYA-DGTALAPRA</option>
+										</select>
+										<label for="floatingSelectReparticion">Repartici&oacute;n</label>
+									</div>
+                                </div>
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="number" 
+											class="form-control" 
+											id="floatingInputAno" 
+											placeholder="1970" 
+											value="2023"
+                                            disabled
+										/>
+										<label for="floatingInputAno">A&ntilde;o</label>
+									</div>
+								</div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md mb-4">
+                                    <div class="form-floating">
+										<select class="form-select" id="floatingSelectTipo" aria-label="Floating label tipo dispo">
+											<option>Seleccion&aacute; un Tipo de Disposici&oacute;n</option>
+											<option selected value="1">Clausura</option>
+                                            <option value="2">Clausura Bajo Condici&oacute;n C/I</option>
+											<option value="3">Clausura Bajo Condici&oacute;n S/I</option>
+											<option value="4">Clausura por  disposici&oacute;n</option>
+                                            <option value="5">Ratificaci&oacute;n de Clausura C/I</option>
+                                            <option value="6">Ratificaci&oacute;n de Clausura S/I</option>
+										</select>
+										<label for="floatingSelectTipo">Tipo Disposici&oacute;n</label>
+									</div>
+                                </div>
+                                <div class="col-md mb-4">
+                                    <div class="form-floating">
+										<select class="form-select" id="floatingSelectAlcance" aria-label="Floating label alcance">
+											<option>Seleccion&aacute; el Alcance</option>
+											<option selected value="1">Parcial</option>
+                                            <option value="2">Total</option>
+										</select>
+										<label for="floatingSelectAlcance">Alcance de la Clausura</label>
+									</div>
+                                </div>
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="text"
+											class="form-control"
+											id="fechaClausura"
+											name="fechaClausura"
+											
+										/>
+										<label for="fechaClausura">Fecha de Clausura</label>
+									</div>
+								</div>
+                            </div>
+                            <div class="row g-2">
+								<label class="form-check-label">Leyes</label>
+								<div class="col-md mb-4">
+									<input class='customLook' value=''>
+									<button type="button">+</button>
+								</div>
+							</div>
+                            <div class="row g2">
+                                <div class="col-md mb-4">
+                                    <div class="form-floating">
+										<select class="form-select" id="floatingSelectEstado" aria-label="Floating label estado dispo">
+											<option>Seleccion&aacute; el Estado de la Disposici&oacute;n</option>
+											<option selected value="1">Notificado</option>
+                                            <option value="2">Inspeccionado</option>
+											<option value="3">No cumplio</option>
+											<option value="4">Programacion</option>
+                                            <option value="5">Vencida</option>
+                                            <option value="6">Etc...</option>
+										</select>
+										<label for="floatingSelectEstado">Estado Disposici&oacute;n</label>
+									</div>
+                                </div>
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="text"
+											class="form-control"
+											id="fechaNotificacion"
+											name="fechaNotificacion"
+											
+										/>
+										<label for="fechaNotificacion">Fecha de Notificaci&oacute;n</label>
+									</div>
+								</div>
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="text"
+											class="form-control"
+											id="fechaEntrega"
+											name="fechaEntrega"
+											
+										/>
+										<label for="fechaEntrega">Fecha de Entrega</label>
+									</div>
+								</div>
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="text"
+											class="form-control"
+											id="fechaDevolucion"
+											name="fechaDevolucion"
+											
+										/>
+										<label for="fechaDevolucion">Fecha de Devoluci&oacute;n</label>
+									</div>
+								</div>
+                                <div class="col-md mb-4">
+                                    <div class="form-floating">
+										<select class="form-select" id="floatingSelectNotificador" aria-label="Floating label Notificador">
+											<option>Seleccion&aacute; el Notificador</option>
+											<option value="1">Martinez, 'Dibu' Emiliano</option>
+                                            <option value="2">Tagliafico, Nicolas</option>
+											<option value="3">De Paul, Rodrigo</option>
+											<option selected value="4">Mac Allister, Alexis</option>
+                                            <option value="5">Di Maria, Angel</option>
+                                            <option value="6">Messi, Lionel</option>
+                                            <option value="7">Alvarez, Julian</option>
+                                            <option value="8">etc...</option>
+										</select>
+										<label for="floatingSelectNotificador">Notificador</label>
+									</div>
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                
+                                <div class="col-md mb-4">
+									<div class="form-check form-switch text-left ml-5 mt-3">
+										<input class="form-check-input text-lg" type="checkbox" role="switch" id="flexSwitchCheckLevantada">
+										<label class="form-check-label" for="flexSwitchCheckLevantada">Levantada?</label>
+									</div>
+								</div>
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="text"
+											class="form-control"
+											id="fechaLevantamiento"
+											name="fechaLevantamiento"
+											
+										/>
+										<label for="fechaLevantamiento">Fecha de Levantamiento</label>
+									</div>
+								</div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="number" 
+											class="form-control" 
+											id="floatingInputNotaDGAI" 
+											placeholder="555666" 
+											
+										/>
+										<label for="floatingInputNotaDGAI">N° de Nota DGAI</label>
+									</div>
+								</div>
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="number" 
+											class="form-control" 
+											id="floatingInputAnoNotaDGAI" 
+											placeholder="1970" 
+											
+										/>
+										<label for="floatingInputAnoNotaDGAI">A&ntilde;o Nota DGAI</label>
+									</div>
+								</div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="number" 
+											class="form-control" 
+											id="floatingInputGiroDoc" 
+											placeholder="555666" 
+											
+										/>
+										<label for="floatingInputGiroDoc">N° de Giro Documental</label>
+									</div>
+								</div>
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="number" 
+											class="form-control" 
+											id="floatingInputAnoGiroDoc" 
+											placeholder="1970" 
+											
+										/>
+										<label for="floatingInputAnoGiroDoc">A&ntilde;o Giro Documental</label>
+									</div>
+								</div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="number" 
+											class="form-control" 
+											id="floatingInputActRem" 
+											placeholder="555666" 
+											
+										/>
+										<label for="floatingInputActRem">N° de Actuaci&oacute;n Remisi&oacute;n</label>
+									</div>
+								</div>
+                                <div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="number" 
+											class="form-control" 
+											id="floatingInputAnoActRem" 
+											placeholder="1970" 
+											
+										/>
+										<label for="floatingInputAnoActRem">A&ntilde;o Actuaci&oacute;n Remisi&oacute;n</label>
+									</div>
+								</div>
+                                <div class="col-md mb-4">
+                                    <div class="form-floating">
+										<select class="form-select" id="floatingSelectTipoActRem" aria-label="Floating label tipo actuacion remision">
+											<option selected>Seleccion&aacute; un Tipo de Actuaci&oacute;n</option>
+											<option value="1">CA</option>
+                                            <option value="2">CO</option>
+											<option value="3">EE</option>
+											<option value="4">EX</option>
+                                            <option value="5">IF</option>
+                                            <option value="6">NO</option>
+                                            <option value="7">PA</option>
+                                            <option value="8">RE</option>
+										</select>
+										<label for="floatingSelectTipoActRem">Tipo de Actuaci&oacute;n Remisi&oacute;n</label>
+									</div>
+                                </div>
+                                <div class="col-md mb-4">
+                                    <div class="form-floating">
+										<select class="form-select" id="floatingSelectControlador" aria-label="Floating label Controlador">
+											<option selected>Seleccion&aacute; un Controlador</option>
+											<option value="1">Martinez, 'Dibu' Emiliano</option>
+                                            <option value="2">Tagliafico, Nicolas</option>
+											<option value="3">De Paul, Rodrigo</option>
+											<option value="4">Mac Allister, Alexis</option>
+                                            <option value="5">Di Maria, Angel</option>
+                                            <option value="6">Messi, Lionel</option>
+                                            <option value="7">Alvarez, Julian</option>
+                                            <option value="8">etc...</option>
+										</select>
+										<label for="floatingSelectControlador">Controlador</label>
+									</div>
+                                </div>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md mb-4">
+									<div class="form-check form-switch text-left ml-5 mt-3">
+										<input class="form-check-input text-lg" type="checkbox" role="switch" id="flexSwitchCheckNocturnidad">
+										<label class="form-check-label" for="flexSwitchCheckCNocturnidad">Nocturnidad?</label>
+									</div>
+								</div>
+                                <div class="col-md mb-4">
+									<div class="form-check form-switch text-left ml-5 mt-3">
+										<input class="form-check-input text-lg" type="checkbox" role="switch" id="flexSwitchCheckPresAdd">
+										<label class="form-check-label" for="flexSwitchCheckPresAdd">Presentaci&oacute;n Agregar</label>
+									</div>
+								</div>
+                                <div class="col-md mb-4">
+									<div class="form-check form-switch text-left ml-5 mt-3">
+										<input class="form-check-input text-lg" type="checkbox" role="switch" id="flexSwitchCheckArt61">
+										<label class="form-check-label" for="flexSwitchCheckArt61">Art&iacute;culo 61</label>
+									</div>
+								</div>
+                            </div>
+                            <div class="row g-2 mb-4">
+                                <label class="mb-2">Observaciones</label>
+									<textarea id="summernote" name="editordata" class="form-control"></textarea>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-md mb-4 align-top">							
+									<div class="form-group">
+										<label for="checklistUpload">Seleccionar documento</label>
+										<input type="file" class="form-control-file" id="checklistUpload">
+										<span class="text-xs text-black-50">Peso m&aacute;ximo permitido del archivo PDF = 10MB.</span>
+									</div>
+								</div>
+                            </div>
+                            <div class="row g-2">
+								<div class="col-md mb-4 text-right">
+									<button class="btn btn-primary" type="submit"><i class="fa-solid fa-floppy-disk mr-2"></i>Guardar</button>
+								</div>
+							</div>
+
+						</form>
+						
+
+					</div>
+
+
+
+                    <!-- Content Row -->
+
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-gray-900">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; DGCONTA 2023</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">¿Todo listo para irte?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Est&aacute;s segur@ que quer&eacute;s Cerrar Sesi&oacute;n?</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+                    <a class="btn btn-primary" href="login.html">Si</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- preview Cedula Modal-->
+    <div class="modal fade" id="previewCedulaModal" tabindex="-1" role="dialog" aria-labelledby="previewCedula"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Vista Previa</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+					<embed 
+						src="docs/cedula-dummy.pdf"
+                        frameborder="0" 
+						width="100%" 
+						height="400px"
+					/>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cerrar</button>
+				</div>					
+			</div>
+		</div>
+	</div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+	<script src="https://unpkg.com/@yaireo/tagify"></script>
+ 	<script src="https://unpkg.com/@yaireo/tagify@3.1.0/dist/tagify.polyfills.min.js"></script>
+  	<script>
+	var input = document.querySelector('.customLook'),
+    tagify = new Tagify(input, {
+      // email address validation (https://stackoverflow.com/a/46181/104380)
+      //pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+      whitelist: ['Ley 123','Ley 154','Ley 1540','RES-310-APRA-2015','Resolucion 1102/04'],
+		
+      callbacks: {
+        "invalid": onInvalidTag
+      },
+      dropdown : {
+        position: 'text',
+        enabled: 1 // show suggestions dropdown after 1 typed character
+      }
+    }),
+    button = input.nextElementSibling;  // "add new tag" action-button
+	
+	button.addEventListener("click", onAddButtonClick)
+
+	function onAddButtonClick(){
+		tagify.addEmptyTag()
+	}
+
+	function onInvalidTag(e){
+	  console.log("invalid", e.detail)
+	}
+
+	// initialize Tagify on the above input node reference
+	//		new Tagify(input)
+  	</script>
+
+
+	<script>
+	var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+	var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+	  return new bootstrap.Tooltip(tooltipTriggerEl)
+	})
+	</script>
+
+    <!-- include summernote js -->
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+	<!-- include summernote-es-ES -->
+	<script src="js/summernote-es-ES.js"></script>
+	<script>
+	$(document).ready(function() {
+		$('#summernote').summernote({
+			height: 200,
+			lang: 'es-ES' // default: 'en-US'
+		});
+	});
+	</script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+    <script>
+    $(function () {
+        $('#fechaClausura').daterangepicker({
+            "locale": {
+                "format": "DD/MM/YYYY",
+                "separator": " - ",
+                "applyLabel": "Seleccionar",
+                "cancelLabel": "Cancelar",
+                "fromLabel": "Desde",
+                "toLabel": "Hasta",
+                "customRangeLabel": "Personalizar",
+                "daysOfWeek": [
+                    "Do",
+                    "Lu",
+                    "Ma",
+                    "Mi",
+                    "Ju",
+                    "Vi",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "Enero",
+                    "Febrero",
+                    "Marzo",
+                    "Abril",
+                    "Mayo",
+                    "Junio",
+                    "Julio",
+                    "Agosto",
+                    "Setiembre",
+                    "Octubre",
+                    "Noviembre",
+                    "Diciembre"
+                ],
+                "firstDay": 1
+            },
+            "opens": "center",
+            "singleDatePicker": true
+        });
+    });
+
+    $(function () {
+        $('#fechaNotificacion').daterangepicker({
+            "locale": {
+                "format": "DD/MM/YYYY",
+                "separator": " - ",
+                "applyLabel": "Seleccionar",
+                "cancelLabel": "Cancelar",
+                "fromLabel": "Desde",
+                "toLabel": "Hasta",
+                "customRangeLabel": "Personalizar",
+                "daysOfWeek": [
+                    "Do",
+                    "Lu",
+                    "Ma",
+                    "Mi",
+                    "Ju",
+                    "Vi",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "Enero",
+                    "Febrero",
+                    "Marzo",
+                    "Abril",
+                    "Mayo",
+                    "Junio",
+                    "Julio",
+                    "Agosto",
+                    "Setiembre",
+                    "Octubre",
+                    "Noviembre",
+                    "Diciembre"
+                ],
+                "firstDay": 1
+            },
+            "opens": "center",
+            "singleDatePicker": true
+        });
+    });
+
+    $(function () {
+        $('#fechaEntrega').daterangepicker({
+            "locale": {
+                "format": "DD/MM/YYYY",
+                "separator": " - ",
+                "applyLabel": "Seleccionar",
+                "cancelLabel": "Cancelar",
+                "fromLabel": "Desde",
+                "toLabel": "Hasta",
+                "customRangeLabel": "Personalizar",
+                "daysOfWeek": [
+                    "Do",
+                    "Lu",
+                    "Ma",
+                    "Mi",
+                    "Ju",
+                    "Vi",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "Enero",
+                    "Febrero",
+                    "Marzo",
+                    "Abril",
+                    "Mayo",
+                    "Junio",
+                    "Julio",
+                    "Agosto",
+                    "Setiembre",
+                    "Octubre",
+                    "Noviembre",
+                    "Diciembre"
+                ],
+                "firstDay": 1
+            },
+            "opens": "center",
+            "singleDatePicker": true
+        });
+    });
+
+    $(function () {
+        $('#fechaDevolucion').daterangepicker({
+            "locale": {
+                "format": "DD/MM/YYYY",
+                "separator": " - ",
+                "applyLabel": "Seleccionar",
+                "cancelLabel": "Cancelar",
+                "fromLabel": "Desde",
+                "toLabel": "Hasta",
+                "customRangeLabel": "Personalizar",
+                "daysOfWeek": [
+                    "Do",
+                    "Lu",
+                    "Ma",
+                    "Mi",
+                    "Ju",
+                    "Vi",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "Enero",
+                    "Febrero",
+                    "Marzo",
+                    "Abril",
+                    "Mayo",
+                    "Junio",
+                    "Julio",
+                    "Agosto",
+                    "Setiembre",
+                    "Octubre",
+                    "Noviembre",
+                    "Diciembre"
+                ],
+                "firstDay": 1
+            },
+            "opens": "center",
+            "singleDatePicker": true
+        });
+    });
+
+    $(function () {
+        $('#fechaLevantamiento').daterangepicker({
+            "locale": {
+                "format": "DD/MM/YYYY",
+                "separator": " - ",
+                "applyLabel": "Seleccionar",
+                "cancelLabel": "Cancelar",
+                "fromLabel": "Desde",
+                "toLabel": "Hasta",
+                "customRangeLabel": "Personalizar",
+                "daysOfWeek": [
+                    "Do",
+                    "Lu",
+                    "Ma",
+                    "Mi",
+                    "Ju",
+                    "Vi",
+                    "Sa"
+                ],
+                "monthNames": [
+                    "Enero",
+                    "Febrero",
+                    "Marzo",
+                    "Abril",
+                    "Mayo",
+                    "Junio",
+                    "Julio",
+                    "Agosto",
+                    "Setiembre",
+                    "Octubre",
+                    "Noviembre",
+                    "Diciembre"
+                ],
+                "firstDay": 1
+            },
+            "opens": "center",
+            "singleDatePicker": true
+        });
+    });
+    </script>
+
+</body>
+
+</html>

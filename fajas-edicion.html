@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Sergio Bosetti">
+
+    <title>Sistema Integral de Gesti&oacute;n Ambiental [Carga de Fajas]</title>
+
+    <!-- Fonts personalizadas -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+		  rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" 
+		  rel="stylesheet">
+	
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    
+	<!-- Estilos personalizados -->
+    <link href="css/sb-admin-2.css" 
+		  rel="stylesheet">
+	
+	<link href="css/select.css" rel="stylesheet" />
+	
+	<!-- Javascript -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://kit.fontawesome.com/0a31562bff.js" 
+			crossorigin="anonymous">
+	</script>
+	
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Inicio Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion bg-dark" 
+			id="accordionSidebar">
+
+            <!-- Sidebar - Logo -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-text mx-3">Sistema Integral de Gesti&oacute;n Ambiental</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+			
+			<!-- Nav Item - Inicio -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Inicio</span>
+				</a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+
+            <!-- Nav Item - Notificaciones -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseNotificaciones"
+                    aria-expanded="true" aria-controls="collapseNotificaciones">
+                    <i class="fa-sharp fa-solid fa-desktop"></i>
+                    <span>Notificaciones</span>
+				</a>
+				<div id="collapseNotificaciones" class="collapse" aria-labelledby="headingNotificaciones" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="inbox.html"><i class="fa-sharp fa-solid fa-inbox mr-2"></i><span>Inbox</span></a>
+                        <a class="collapse-item" href="programacion.html"><i class="fa-sharp fa-solid fa-map-location-dot mr-2"></i></i><span>Programaci&oacute;n</span></a>
+						<a class="collapse-item" href="mis-pedidos.html"><i class="fa-sharp fa-solid fa-circle-question mr-2"></i></i><span>Mis pedidos</span></a>
+						<a class="collapse-item" href="autorizar.html"><i class="fa-sharp fa-solid fa-circle-check mr-2"></i><span>Autorizar</span></a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Usuarios -->
+            <li class="nav-item">
+                <a class="nav-link" href="usuarios.html">
+                    <i class="fa-sharp fa-solid fa-users"></i>
+                    <span>Usuarios</span></a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Fajas -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFajas"
+                    aria-expanded="true" aria-controls="collapseFajas">
+                    <i class="fa-sharp fa-solid fa-store-slash"></i>
+                    <span>Fajas</span>
+                </a>
+                <div id="collapseFajas" class="collapse" aria-labelledby="headingFajas"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="fajas-asignacion.html"><i class="fa-sharp fa-solid fa-user-plus mr-2"></i><span>Asignaci&oacute;n</span></a>
+                        <a class="collapse-item" href="fajas-carga.html"><i class="fa-solid fa-list-ul mr-2"></i><span>Reportes</span></a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Actas -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseActas"
+                    aria-expanded="true" aria-controls="collapseActas">
+                    <i class="fa-sharp fa-solid fa-table"></i>
+                    <span>Actas</span>
+                </a>
+                <div id="collapseActas" class="collapse" aria-labelledby="headingActas" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="actas-asignacion.html"><i class="fa-sharp fa-solid fa-user-plus mr-2"></i><span>Asignaci&oacute;n</span></a>
+                        <a class="collapse-item" href="actas-carga.html"><i class="fa-sharp fa-solid fa-list-ul mr-2"></i><span>Reportes</span></a>
+                        <a class="collapse-item" href="actas-envioboldt.html"><i class="fa-sharp fa-solid fa-square-arrow-up-right mr-2"></i><span>Envio a Boldt</span></a>
+                    </div>
+                </div>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Reporte Diario -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDiario"
+                    aria-expanded="true" aria-controls="collapseDiario">
+                    <i class="fa-sharp fa-solid fa-chart-line"></i>
+                    <span>Reporte Diario</span>
+                </a>
+                <div id="collapseDiario" class="collapse" aria-labelledby="headingDiario" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="checklist-alta.html"><i class="fa-sharp fa-solid fa-square-check mr-2"></i><span>Alta Checklist</span></a>
+                        <a class="collapse-item" href="checklist-autorizacion.html"><i class="fa-sharp fa-solid fa-thumbs-up mr-2"></i><span>Autorizaci&oacute;n Checklist</span></a>
+                        <a class="collapse-item" href="checklist-cierre.html"><i class="fa-sharp fa-solid fa-lock mr-2"></i><span>Validaci&oacute;n Checklist</span></a>
+						 <a class="collapse-item" href="checklist-upload.html"><i class="fa-solid fa-arrow-up-from-bracket mr-2"></i><span>Subir Checklist</span></a>
+						<a class="collapse-item" href="unir-establecimientos.html"><i class="fa-solid fa-down-left-and-up-right-to-center mr-2"></i><span>Unir Establecimientos</span></a>
+						
+                    </div>
+                </div>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Control Area -->
+            <li class="nav-item">
+                <a class="nav-link" href="control-area.html">
+                    <i class="fa-sharp fa-solid fa-compass"></i>
+                    <span>Control &Aacute;rea</span></a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+			
+            <!-- Nav Item - Programacion Area -->
+            <li class="nav-item">
+                <a class="nav-link" href="programacion-area.html">
+                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    <span>Programaci&oacute;n &Aacute;rea</span></a>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Laboratorio -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLaboratorio"
+                    aria-expanded="true" aria-controls="collapseLaboratorio">
+                    <i class="fa-sharp fa-solid fa-flask-vial"></i>
+                    <span>Laboratorio</span>
+                </a>
+                <div id="collapseLaboratorio" class="collapse" aria-labelledby="headingLaboratorio"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="laboratorio-pedidos.html"><i class="fa-sharp fa-solid fa-clipboard-question mr-2"></i><span>Pedidos</span></a>
+                        <a class="collapse-item" href="laboratorio-muestras.html"><i class="fa-sharp fa-solid fa-vial mr-2"></i><span>Muestras</span></a>
+                    </div>
+                </div>
+            </li>
+			
+			<!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Admin Panel -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdminpanel"
+                    aria-expanded="true" aria-controls="collapseAdminpanel">
+                    <i class="fa-sharp fa-solid fa-sliders"></i>
+                    <span>Admin Panel</span>
+                </a>
+                <div id="collapseAdminpanel" class="collapse" aria-labelledby="headingAdminpanel" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        
+                        
+						<a class="collapse-item" href="reporte-metas.html"><i class="fa-sharp fa-solid fa-flag-checkered mr-2"></i><span>Reporte Metas</span></a>
+						<a class="collapse-item" href="reporte-faltas.html"><i class="fa-sharp fa-solid fa-circle-xmark mr-2"></i><span>Reporte Faltas</span></a>
+						<a class="collapse-item" href="reporte-general.html"><i class="fa-sharp fa-solid fa-chart-column mr-2"></i><span>Reporte General</span></a>
+                    </div>
+                </div>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline"> 
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- Fin Sidebar -->
+
+        <!-- Wrapper Contenido -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Contenido principal -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+					
+					<a href="index.html">
+					<img
+					  class="sidebar-card-illustration mb-2"
+					  src="img/logoBA.svg"
+					  alt="Ciudad de Buenos Aires"
+					/>
+				  </a>
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+
+                        <!-- Nav Item - Alerta CHL Vencidos -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-bell"></i>
+                                <!-- Contador - CHL Vencidos -->
+                                <span class="badge badge-danger badge-counter">3</span>
+                            </a>
+                            <!-- Dropdown - CHL Vencidos -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header bg-danger border-0">
+                                    3 Checklist Vencidos
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-danger">
+                                            <i class="fa-solid fa-file-lines text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Checklist N° 109456</div>
+                                        <span class="font-weight-bold">Hac&eacute; clic aqu&iacute; para editar</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-danger">
+                                            <i class="fa-solid fa-file-lines text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Checklist N° 109498</div>
+                                        Hac&eacute; clic aqu&iacute; para editar
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-danger">
+                                            <i class="fa-solid fa-file-lines text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Checklist N° 109501</div>
+                                        Hac&eacute; clic aqu&iacute; para editar
+                                    </div>
+                                </a>
+                                <div href="checklist-vencidos.html" class="dropdown-item d-flex">
+									<div class="btn btn-danger" style="width: 100%;">
+										<span class="text text-white">Ver todos los checklist</span>
+									</div>
+								</div>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - CHL Reprogramar -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-repeat"></i>
+                                <!-- Contador - CHL Reprogramar -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - CHL Reprogramar -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header bg-warning border-0 text-black">
+                                    7 Checklist para Reinspeccionar
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">DEFENSA 1490</div>
+                                        <div class="small text-gray-500">Checklist 171151</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">PEDRAZA MANUELA 4067</div>
+                                        <div class="small text-gray-500">Checklist 171130</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                   <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">HELGUERA 2876</div>
+                                        <div class="small text-gray-500">Checklist 171154</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-gradient-warning">
+                                            <i class="fa-solid fa-arrows-rotate text-black-50"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">IBARROLLA 7274</div>
+                                        <div class="small text-gray-500">Checklist 173444</div>
+                                    </div>
+                                </a>
+                                <div href="checklist-reinspeccionar.html" class="dropdown-item d-flex">
+									<div class="btn btn-warning" style="width: 100%;">
+										<span class="text text-black">Ver todos los checklist</span>
+									</div>
+								</div>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - Info Usuario -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<!-- Nombre y Apellido Usuario -->
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Manuel Mandeb</span>
+								<!-- Avatar Usuario -->
+                                <i class="fa-solid fa-circle-user text-lg"></i>
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">                            
+                                
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+									<i class="fa-solid fa-arrow-right-from-bracket mr-2 text-gray-400"></i>
+                                    Cerrar Sesi&oacute;n
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- Fin Topbar -->
+
+                <!-- Inicio Contenido de Pagina -->
+                <div class="container-fluid">
+					
+					<!-- Page Heading -->
+						
+					<div class="d-sm-flex align-items-center justify-content-between mb-4">
+												
+                        <h1 class="h3 mb-0 text-primary">
+							<i class="fa-solid fa-file-import mr-2"></i>
+							Carga de Faja N° 0303456
+						</h1>
+                    </div>
+					
+					
+                    <!-- Content Row -->
+                    <div class="row">
+						
+							<form>
+							<div class="row g-2">
+								<div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="text" 
+											class="form-control" 
+											id="floatingInputGrid" 
+											placeholder="20123456780" 
+											value="Mandeb, Manuel"
+											disabled readonly
+										/>
+										<label for="floatingInputGrid">Inspector/a</label>
+									</div>
+								</div>
+								<div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="text" 
+											class="form-control" 
+											id="floatingInputGrid" 
+											placeholder="Manuel" 
+											value="07/08/2021"
+											disabled readonly
+										/>
+										<label for="floatingInputGrid">Fecha Asignaci&oacute;n</label>
+									</div>
+								</div>
+							</div>
+							<div class="row g-2">
+								<div class="col-md mb-4">
+									<div class="form-floating">
+										<select class="form-select" id="floatingSelectGrid" aria-label="Floating label area">
+											<option selected>Seleccion&aacute; el &Aacute;rea</option>
+											<option value="1">Norte</option>
+											<option value="2">Sur</option>
+											<option value="3">Este</option>
+											<option value="4">Oeste</option>
+											<option value="5">Nocturnidad</option>
+											<option value="6">etc...</option>
+										</select>
+										<label for="floatingSelectGrid">&Aacute;rea</label>
+									</div>
+								</div>
+								<div class="col-md mb-4">
+									<div class="form-floating">
+										<select class="form-select" id="floatingSelectGrid" aria-label="Floating label tipoClausura">
+											<option selected>Seleccion&aacute; el Tipo de Clausura</option>
+											<option value="1">Parcial</option>
+											<option value="2">Total</option>
+											<option value="3">Reimplantaci&oacute;n</option>
+										</select>
+										<label for="floatingSelectGrid">Tipo de Clausura</label>
+									</div>
+								</div>
+							</div>
+							<div class="row g-2">
+								<div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="text"
+											class="form-control"
+											id="fechaInspeccionFaja"
+											name="fechaInspeccionFaja"
+										/>
+										<label for="fechaInspeccionFaja">Fecha Inspecci&oacute;n</label>
+									</div>
+								</div>
+								<div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="text"
+											class="form-control"
+											id="fechaRecepcionFaja"
+											name="fechaRecepcionFaja"
+										/>
+										<label for="fechaRecepcionFaja">Fecha Recepci&oacute;n</label>
+									</div>
+								</div>
+							</div>
+							<div class="row g-2">
+								<div class="col-md mb-4">
+									<div class="form-floating">
+										<input 
+											type="number" 
+											class="form-control" 
+											id="floatingInputGrid" 
+											placeholder="20123456780" 
+											value=""
+										/>
+										<label for="floatingInputGrid">Checklist N°</label>
+									</div>
+								</div>
+								<div class="col-md mb-4">
+									<div class="form-floating">
+										<select class="form-select" id="floatingSelectGrid" aria-label="Floating label estadoFaja">
+											<option selected>Seleccion&aacute; el Estado</option>
+											<option value="2">Asignado</option>
+											<option value="3">Reasignado</option>
+											<option value="4">Clausura</option>
+											<option value="4">Reimplantaci&oacute;n</option>
+										</select>
+										<label for="floatingSelectGrid">Estado</label>
+									</div>
+								</div>
+							</div>
+							<div class="row g-2">
+								<div class="col-md mb-4"></div>
+								<div class="col-md mb-4 text-right">
+									<button class="btn btn-primary" type="submit"><i class="fa-solid fa-floppy-disk mr-2"></i>Guardar</button>
+								</div>
+							</div>
+							
+						</form>
+						
+
+					</div>
+
+
+
+                    <!-- Content Row -->
+
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-gray-900">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; DGCONTA 2023</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">¿Todo listo para irte?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Est&aacute;s segur@ que quer&eacute;s Cerrar Sesi&oacute;n?</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">No</button>
+                    <a class="btn btn-primary" href="login.html">Si</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+	<script>
+	$(function () {
+		$('#fechaInspeccionFaja').daterangepicker({
+			"locale": {
+				"format": "DD/MM/YYYY",
+				"separator": " - ",
+				"applyLabel": "Seleccionar",
+				"cancelLabel": "Cancelar",
+				"fromLabel": "Desde",
+				"toLabel": "Hasta",
+				"customRangeLabel": "Personalizar",
+				"daysOfWeek": [
+					"Do",
+					"Lu",
+					"Ma",
+					"Mi",
+					"Ju",
+					"Vi",
+					"Sa"
+				],
+				"monthNames": [
+					"Enero",
+					"Febrero",
+					"Marzo",
+					"Abril",
+					"Mayo",
+					"Junio",
+					"Julio",
+					"Agosto",
+					"Setiembre",
+					"Octubre",
+					"Noviembre",
+					"Diciembre"
+				],
+				"firstDay": 1
+			},
+			"opens": "center",
+			"singleDatePicker": true
+		});
+	});
+		
+		
+	$(function () {
+		$('#fechaRecepcionFaja').daterangepicker({
+			"locale": {
+				"format": "DD/MM/YYYY",
+				"separator": " - ",
+				"applyLabel": "Seleccionar",
+				"cancelLabel": "Cancelar",
+				"fromLabel": "Desde",
+				"toLabel": "Hasta",
+				"customRangeLabel": "Personalizar",
+				"daysOfWeek": [
+					"Do",
+					"Lu",
+					"Ma",
+					"Mi",
+					"Ju",
+					"Vi",
+					"Sa"
+				],
+				"monthNames": [
+					"Enero",
+					"Febrero",
+					"Marzo",
+					"Abril",
+					"Mayo",
+					"Junio",
+					"Julio",
+					"Agosto",
+					"Setiembre",
+					"Octubre",
+					"Noviembre",
+					"Diciembre"
+				],
+				"firstDay": 1
+			},
+			"opens": "center",
+			"singleDatePicker": true
+		});
+	});
+	</script>
+
+
+</body>
+
+</html>
